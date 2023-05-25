@@ -2,7 +2,7 @@
 
 Nodejs library for exir Kit.
 
-**This library is specifically for end users and traders to connect to Exir. It connects to [Exir Pro](https://pro.exir.io/trade/btc-usdt) by default.**
+**This library is specifically for end users and traders to connect to Exir. It connects to [Exir](https://pro.exir.io/trade/btc-usdt) by default.**
 
 ## Usage
 
