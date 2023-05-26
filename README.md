@@ -358,11 +358,11 @@ These are exapmles of data responses from the server.
 You can run the example by going to example folder and running:
 
 ```bash
-node example/hollaex.js
+node example/exir.js
 ```
 
 ## Documentation
 
 For adding additional functionalities simply go to index.js and add more features.
-You can read more about api documentation at https://apidocs.hollaex.com
+You can read more about api documentation at https://apidocs.exir.io
 You should create your token on the platform in setting->api keys
