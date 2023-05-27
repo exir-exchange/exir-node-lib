@@ -19,8 +19,6 @@ You can also pass your `apiKey` and `apiSecret` generated from the exchange to u
 
 ```javascript
 const client = new exir({
-	apiURL: '<EXCHANGE_API_URL>',
-	wsURL: '<EXCHANGE_WS_URL>',
 	apiKey: '<MY_API_KEY>',
 	apiSecret: '<MY_API_SECRET>'
 });
@@ -32,8 +30,6 @@ You can also pass the field `apiExpiresAfter` which is the length of time in sec
 
 ```javascript
 const client = new exir({
-	apiURL: '<EXCHANGE_API_URL>',
-	wsURL: '<EXCHANGE_API_URL>',
 	apiKey: '<MY_API_KEY>',
 	apiSecret: '<MY_API_SECRET>'
 });
