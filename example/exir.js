@@ -4,8 +4,6 @@ require('dotenv').load();
 const API_KEY = process.env.API_KEY || '';
 const API_SECRET = process.env.API_SECRET || '';
 const client = new Exir({
-	apiURL: 'https://api.exir.io',
-	wsURL: 'wss://api.exir.io/stream',
 	baseURL: '/v2',
 	apiKey: API_KEY,
 	apiSecret: API_SECRET
