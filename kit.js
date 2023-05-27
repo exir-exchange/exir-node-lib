@@ -5,17 +5,17 @@ const moment = require('moment');
 const { createRequest, createSignature, generateHeaders, isDatetime, sanitizeDate } = require('./utils');
 const { setWsHeartbeat } = require('ws-heartbeat/client');
 const { each, union, isNumber, isString, isPlainObject, isBoolean, isObject } = require('lodash');
-class HollaExKit {
+class Exir {
 	constructor(
 		opts = {
-			apiURL: 'https://api.hollaex.com',
+			apiURL: 'https://api.exir.io',
 			baseURL: '/v2',
 			apiKey: '',
 			apiSecret: '',
 			apiExpiresAfter: 60
 		}
 	) {
-		this.apiUrl = opts.apiURL || 'https://api.hollaex.com';
+		this.apiUrl = opts.apiURL || 'https://api.exir.io';
 		this.baseUrl = opts.baseURL || '/v2';
 		this.apiKey = opts.apiKey;
 		this.apiSecret = opts.apiSecret;
@@ -123,7 +123,7 @@ class HollaExKit {
 
 	/**
 	 * Retrieve tick size, min price, max price, min size, and max size of each symbol-pair
-	 * @return {object} A JSON object with the keys pairs(information on each symbol-pair such as tick_size, min/max price, and min/max size) and currencies(array of all currencies involved in hollaEx)
+	 * @return {object} A JSON object with the keys pairs(information on each symbol-pair such as tick_size, min/max price, and min/max size) and currencies(array of all currencies involved in exir)
 	 */
 	getConstants() {
 		return createRequest(
@@ -2281,7 +2281,7 @@ class HollaExKit {
 	
 	
 	/**
-	 * Connect to hollaEx websocket and listen to an event
+	 * Connect to exir websocket and listen to an event
 	 * @param {array} events - The events to listen to
 	 */
 	connect(events = []) {
@@ -2370,7 +2370,7 @@ class HollaExKit {
 	}
 
 	/**
-	 * Disconnect from hollaEx websocket
+	 * Disconnect from exir websocket
 	 */
 	disconnect() {
 		if (this.wsConnected()) {
@@ -2382,7 +2382,7 @@ class HollaExKit {
 	}
 
 	/**
-	 * Subscribe to hollaEx websocket events
+	 * Subscribe to exir websocket events
 	 * @param {array} events - The events to listen to
 	 */
 	subscribe(events = []) {
@@ -2447,7 +2447,7 @@ class HollaExKit {
 	}
 
 	/**
-	 * Unsubscribe to hollaEx websocket events
+	 * Unsubscribe to exir websocket events
 	 * @param {array} events - The events to unsub from
 	 */
 	unsubscribe(events = []) {
@@ -2499,4 +2499,4 @@ class HollaExKit {
 	}
 }
 
-module.exports = HollaExKit;
+module.exports = Exir;
